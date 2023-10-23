@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 const DetailsScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles.screen}>
       <Text>about me Screen</Text>
       <Button
         title="Go to About"
@@ -26,11 +26,6 @@ const DetailsScreen = ({ navigation }) => {
         title="Go back"
         onPress={() => navigation.goBack()}//-> terug naar vorige scherm
       />
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.navigate('Details')}//-> we staan al op details dus zal niet reageren
-      />
-
       <Button
         title="Go back to first screen in stack"
         onPress={() => navigation.popToTop()}//-> ga naar het eerste scherm in de stack (toevallig nu ook home, wissel ze maar eens om in de stack en zie wat er zal gebeuren)
